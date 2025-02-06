@@ -22,15 +22,17 @@
 		Connection conn= DriverManager.getConnection(host, user, pass);
 		
 		//3단계 - SQL 실행 객체 생성
-		String sql = "INSERT INTO `user1` VALUES (?,?,?,?)";
+		String sql = "UPDATE `user1` SET `name`=?, `hp`=?, `age`=? WHERE `uid`=?";
 		PreparedStatement psmt = conn.prepareStatement(sql);
-		psmt.setString(1,uid);
-		psmt.setString(2,name);
-		psmt.setString(3,hp);
-		psmt.setString(4,age);
+		psmt.setString(1,name);
+		psmt.setString(2,hp);
+		psmt.setString(3,age);
+		psmt.setString(4,uid);
 		
 		//4단계 - SQL 실행
 		psmt.executeUpdate();
+		
+		
 		//5단계 - 결과셋 처리(SELECT 경우)
 		//6단계 - 데이터베이스 종료
 		psmt.close();
