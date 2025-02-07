@@ -8,6 +8,37 @@
 		날짜 : 2025/02/07
 		이름 : 김준서
 		내용 : JSP 데이터베이스 커넥션 풀(DBCP) 실습하기
+		
+		<!-- 데이터베이스 커넥션 풀 설정 -->
+    <Resource
+    	name="jdbc/studydb"
+    	auth="Container"
+    	type="javax.sql.DataSource"
+    	driverClassName="com.mysql.cj.jdbc.Driver"
+    	url="jdbc:mysql://127.0.0.1:3306/studydb"
+    	username="root"
+    	password="1234"
+    	maxTotal="13"
+    	maxIdle="13"
+    	maxWaitMillis="3000"
+    	/>
+    	
+    <Resource
+    	name="jdbc/shop"
+    	auth="Container"
+    	type="javax.sql.DataSource"
+    	driverClassName="com.mysql.cj.jdbc.Driver"
+    	url="jdbc:mysql://127.0.0.1:3306/shop"
+    	username="root"
+    	password="1234"
+    	maxTotal="13"
+    	maxIdle="13"
+    	maxWaitMillis="3000"
+    	/>
+    	
+    	maxTotal : 풀에 생성되는 최대 커넥션 갯수
+    	maxIdle : 풀에 유지되는 커넥션 갯수
+    	maxWaitMillis : 풀에서 커넥션을 기다리는 대기 시간
 	 -->
 </head>
 <body>
