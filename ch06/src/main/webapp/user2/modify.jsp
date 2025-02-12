@@ -36,9 +36,9 @@
 	<h3>user3 수정</h3>
 	
 	<a href="../1.jdbc.jsp">처음으로</a>
-	<a href="./list.jsp">목록이동</a>
+	<a href="/ch06/user2/list.jsp">목록이동</a>
 	
-	<form action="./proc/modify.jsp">
+	<form action="/ch06/user2/proc/modify.jsp">
 		<table border="">
 			<tr>
 				<td>아이디</td>
