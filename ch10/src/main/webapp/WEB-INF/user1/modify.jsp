@@ -15,7 +15,7 @@
 		<table border="1"> 
 			<tr>
 				<td>아이디</td>
-				<td><input type="text" name="uid" readonly value="${dto.uid}" placeholder="아이디 입력"></td>
+				<td><input type="text" name="uid" readonly="readonly" value="${dto.uid}" placeholder="아이디 입력"></td>
 			</tr>
 			<tr>
 				<td>이름</td>
