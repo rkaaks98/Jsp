@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("user3/list.do")
+@WebServlet("/user3/list.do")
 public class ListController extends HttpServlet {
 
   

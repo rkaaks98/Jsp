@@ -14,8 +14,7 @@ public class RemoveController extends HttpServlet{
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    
-    
+        
   }
   
   @Override

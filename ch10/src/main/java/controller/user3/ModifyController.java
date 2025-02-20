@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("user3/modify.do")
+@WebServlet("/user3/modify.do")
 public class ModifyController extends HttpServlet {
 
   private static final long serialVersionUID = 4165846516L;
