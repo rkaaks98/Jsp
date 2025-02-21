@@ -14,6 +14,17 @@
                 <nav>
                     <h1>글쓰기</h1>
                 </nav>
+                <!-- 
+                	파일 업로드 작업 과정
+                	1) Tomcat 설정 
+                		-Servers > context.xml > allowCasualMultipartParsing="true" 설정
+                		-Servers > server.xml > 64번째줄 maxPostSize="10485760" 설정
+                	2) 파일 전송 폼 설정
+                		-form 태그에 enctype="multipart/form-data" 설정
+                	
+                	3) 업로드 로직 처리(백엔드)
+                		-req.getParts() 파일 업로드 수행(Service에 처리)
+                 -->
                 <form action="/jboard/article/write.do" method="post" enctype="multipart/form-data">
                 	<input type="hidden" name="writer" value="${sessUser.uid}"readonly>
                     <table border="0">                        
@@ -30,7 +41,7 @@
                         <tr>
                             <th>파일</th>
                             <td>
-                            	<p style="margin-bottom: 10px">
+                            	<p style="margin-bottom: 6px">
                             		최대 2개 파일 첨부 가능,각 파일당 최대 10MB까지 가능
                             	</p>
                                 <input type="file" name="file1" />

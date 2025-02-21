@@ -278,6 +278,5 @@ document.addEventListener('DOMContentLoaded', function(){
 		
 		return true; //폼 전송 시작
 	}
-	//최종 폼 전송 이벤트 끝
 	
 });

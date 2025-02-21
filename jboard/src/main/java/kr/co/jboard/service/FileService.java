@@ -1,6 +1,7 @@
 package kr.co.jboard.service;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -38,8 +39,10 @@ public enum FileService {
     dao.deleteFile(fno);
   }
   
-  //파일 업로드 비지니스 메서드
-  public void uploadFile(HttpServletRequest req) {
+  //파일 업로드
+  public List<FileDTO> uploadFile(HttpServletRequest req) {
+	  
+	  List<FileDTO> files = new ArrayList<FileDTO>();
 	  
 	  //업로드 경로 구하기
 	  ServletContext ctx = req.getServletContext();
@@ -69,18 +72,18 @@ public enum FileService {
 				  //파일 저장
 				  part.write(uploadPath + File.separator + sName);
 				  
-				
+				  //FileDTO 객체 생성
+				  FileDTO dto = new FileDTO();
+				  dto.setoName(oName);
+				  dto.setsName(sName);
+				  
+				  files.add(dto);
 			} 
-		  }
-		  
-		  
-		  
-		  
+		  }	  
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	  
-	  
+	  return files;
   }
   
   
