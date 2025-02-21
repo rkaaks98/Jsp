@@ -1,9 +1,10 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>회원정보 설정</title>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="/jboard2/css/style.css"/>
 </head>
 <body>
     <div id="wrapper">
@@ -55,7 +56,7 @@
                             <td>
                                 <p class="nickInfo">공백없는 한글, 영문, 숫자 입력</p>
                                 <input type="text" name="nick" placeholder="별명 입력"/>
-                                <button type="button" id="btnNickCheck"><img src="../images/chk_id.gif" alt="중복확인"/></button>
+                                <button type="button" id="btnNickCheck"><img src="/jboard2/images/chk_id.gif" alt="중복확인"/></button>
                                 <span class="nickResult"></span>
                             </td>
                         </tr>
@@ -65,10 +66,10 @@
                                 
                                 <input type="email" name="email" placeholder="이메일 입력"/>
                                 <span class="emailResult"></span>
-                                <button type="button" id="btnEmailAuth"><img src="../images/chk_auth.gif" alt="인증번호 받기"/></button>
+                                <button type="button" id="btnEmailAuth"><img src="/jboard2/images/chk_auth.gif" alt="인증번호 받기"/></button>
                                 <div class="auth">
                                     <input type="text" name="auth" placeholder="인증번호 입력"/>
-                                    <button type="button" id="btnEmailConfirm"><img src="../images/chk_confirm.gif" alt="확인"/></button>
+                                    <button type="button" id="btnEmailConfirm"><img src="/jboard2/images/chk_confirm.gif" alt="확인"/></button>
                                 </div>
                             </td>
                         </tr>
